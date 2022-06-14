@@ -10,19 +10,20 @@
   --neutral-color__neutral-5: #e0e0e0;
   --neutral-color__neutral-6: #f5f5f5;
   --neutral-color__neutral-7: #ffffff;
+  --font-title-1: normal 20px Segoe UI;
+  --font-paragrafo: normal 17px Segoe UI;
+  --font-subtitle-1: 600 17px Segoe UI;
+  --font-subtitle-2: 200 17px Segoe UI;
+  --font-button: 600 17px Montserrat;
+  --font-legend: normal 17px Segoe UI;
 }
 /*
-Título: Segoe UI, 20, Regular;
-Subtítulo-1: Segoe UI, 17, Semibold;
-Subtítulo-2: Segoe UI, 17, Semilight;
-p:Segoe UI, 17, Regular;
-botao: Montserrat, 17, semibold;
-legend: Segoe UI, 12, Regular;
+#elemento { font: italic small-caps bold 12px/18px Arial, Helvetica, Verdana }
 
-font-family: "Segoe UI";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 17px;
+font-weight: 100 - Thin (Hairline); 200 - Extra Light (Ultra Light, Ultra Fino);
+300 - Light (Fino); 400 - Normal; 500 - Medium (Médio);
+600 - Semi Bold (Demi Bold, Semi Negrito); 700 - Bold (Negrito);
+800 - Extra Bold (Ultra Bold, Super Negrito); 900 - Black (Heavy)
 */
 
 * {
@@ -36,13 +37,32 @@ font-family: "Segoe UI";
   height: 117px;
   background-color: var(--brand-color__primary-0);
   display: flex;
-  align-items: center;
   justify-content: space-between;
 }
 
-.header__div {
+.header__title {
   display: flex;
   align-items: center;
+  margin-left: 68px;
+}
+
+.header__exit {
+  display: block;
+  align-items: center;
+  margin-top: 38px;
+  margin-right: 63px;
+}
+
+.header__title__text {
+  font: var(--font-title-1);
+}
+
+.header__title__img {
+  margin-right: 36px;
+}
+
+.header__exit__text {
+  font: var(--font-legend);
 }
 
 .nav {
@@ -58,20 +78,16 @@ font-family: "Segoe UI";
 
 .footer {
   position: absolute;
+  width: 100%;
   bottom: 0;
   height: 93px;
   background-color: var(--neutral-color__neutral-6);
-  justify-content: center;
 }
 
 .footer__text {
-  margin: auto;
-  left: 0;
-  right: 0;
-  font-family: "Segoe UI";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 17px;
+  text-align: center;
+  margin-top: 40px;
   line-height: 24px;
+  font: var(--font-paragrafo);
   color: var(--neutral-color__neutral-2);
 }
