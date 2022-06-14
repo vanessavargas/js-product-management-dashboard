@@ -26,51 +26,80 @@
         <p class="header__exit__text">Sair</p>
       </div>
     </header>
+    
     <main>
-      <div id="buttons">
-        <!-- Aqui irão os botões das categorias, via api-->
+      <div id="categories">
+        <!-- Aqui irão os botões das categorias, via api
+        Teste de estilização -->
+        <button class="button__habilitado--tertiary" type="submit">
+          Sobremesas
+        </button>
+        <button class="button__habilitado--tertiary" type="submit">
+          Sobremesas
+        </button>
+        <button class="button__habilitado--tertiary" type="submit">
+          Sobremesas
+        </button>
+        <button class="button__habilitado--tertiary" type="submit">
+          Sobremesas
+        </button>
       </div>
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <img src="assets/icons/ic_produtos.svg" alt="icone de sacola" />
-            <p>Produtos cadastrados</p>
-          </li>
-          <li>
-            <input
-              type="search"
-              name="search"
-              id=""
-              placeholder="Buscar na categoria"
-            />
-          </li>
-          <li>
-            <select id="ordem" name="ordem">
-              <option value="">Ordenar por (1)</option>
-              <option value="maior">Maior preço</option>
-              <option value="menor">Menor preço</option>
-            </select>
-          </li>
-        </ul>
-      </nav>
+      <div class="nav">
+        <div class="nav__item">
+          <img
+            class="nav__item__img"
+            src="assets/icons/ic_produtos.svg"
+            alt="icone de sacola"
+          />
+          <p class="nav__item__text">Produtos cadastrados</p>
+          <input
+            class="nav__item__search"
+            type="search"
+            value="Buscar na categoria"
+          />
+        </div>
+
+        <div class="nav__item">
+          <select class="nav__item__select" id="ordem" name="ordem">
+            <option value="">Ordenar por (1)</option>
+            <option value="maior">Maior preço</option>
+            <option value="menor">Menor preço</option>
+          </select>
+        </div>
+      </div>
       <section class="produtos">
         <a href="cadastrar.html">Cadastrar Produtos</a>
         <a href="editar.html">Cadastrar Produtos</a>
       </section>
-
-      <div id="myModal" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal()">&times;</span>
-          <div class="modal-body">
-            <!--Modal para excluir - inserir conteúdo aqui-->
-          </div>
-        </div>
-      </div>
     </main>
+
     <footer class="footer">
       <div class="footer__text">
         <p>2022 | Usemobile. Todos direitos reservados.</p>
       </div>
     </footer>
+
+    <div id="myModal" class="modal">
+      <div class="modal__content">
+        <div class="modal__content__body">
+          <div>
+            <h3 class="modal__content__body--title">Apagar produto</h3>
+            <p class="modal__content__body--text">
+              Deseja realmente apagar este produto?
+            </p>
+            <input
+              class="modal__content__body--input-yes"
+              type="submit"
+              value="Sim, apagar"
+            />
+            <input
+              class="modal__content__body--input-no"
+              type="submit"
+              value="Não"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
