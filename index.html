@@ -4,18 +4,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Restaurante</title>
+    <title>Restaurante Itacolomi</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header class="header">
-      <div class="header__div">
-        <img src="assets/logo.svg" alt="logotipo do Restaurante Itacolomi" />
-        <p>Olá, Joana!</p>
+      <div class="header__title">
+        <img
+          class="header__title__img"
+          src="assets/logo.svg"
+          alt="logotipo do Restaurante Itacolomi"
+        />
+        <p class="header__title__text">Olá, Joana!</p>
       </div>
-      <div class="header__div">
-        <img src="assets/icons/ic_exit.svg" alt="ícone para sair" />
-        <p>Sair</p>
+      <div class="header__exit">
+        <img
+          class="header__exit__img"
+          src="assets/icons/ic_exit.svg"
+          alt="ícone para sair"
+        />
+        <p class="header__exit__text">Sair</p>
       </div>
     </header>
     <main>
@@ -25,26 +33,30 @@
       <nav class="nav">
         <ul class="nav__list">
           <li class="nav__item">
-          <img src="assets/icons/ic_produtos.svg" alt="icone de sacola" />
-          <p>Produtos cadastrados</p>
+            <img src="assets/icons/ic_produtos.svg" alt="icone de sacola" />
+            <p>Produtos cadastrados</p>
           </li>
           <li>
-          <input
-            type="search"
-            name="search"
-            id=""
-            placeholder="Buscar na categoria"
-          />
+            <input
+              type="search"
+              name="search"
+              id=""
+              placeholder="Buscar na categoria"
+            />
           </li>
           <li>
-          <select id="ordem" name="ordem">
-            <option value="">Ordenar por (1)</option>
-            <option value="maior">Maior preço</option>
-            <option value="menor">Menor preço</option>
-          </select>
-        </li>
+            <select id="ordem" name="ordem">
+              <option value="">Ordenar por (1)</option>
+              <option value="maior">Maior preço</option>
+              <option value="menor">Menor preço</option>
+            </select>
+          </li>
         </ul>
-      </div>
+      </nav>
+      <section class="produtos">
+        <a href="cadastrar.html">Cadastrar Produtos</a>
+        <a href="editar.html">Cadastrar Produtos</a>
+      </section>
 
       <div id="myModal" class="modal">
         <div class="modal-content">
@@ -56,7 +68,9 @@
       </div>
     </main>
     <footer class="footer">
-        <p class="footer__text">2022 | Usemobile. Todos direitos reservados.</p>
+      <div class="footer__text">
+        <p>2022 | Usemobile. Todos direitos reservados.</p>
+      </div>
     </footer>
   </body>
 </html>
