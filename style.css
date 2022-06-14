@@ -1,0 +1,55 @@
+:root {
+  --brand-color__primary-0: #f29c46;
+  --brand-color__primary-1: #c14d19;
+  --brand-color__secondary-0: #72bc54;
+  --neutral-color__neutral-0: #262626;
+  --neutral-color__neutral-1: #292929;
+  --neutral-color__neutral-2: #666666;
+  --neutral-color__neutral-3: #a3a3a3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: none;
+  list-style: none;
+}
+
+.header {
+  height: 117px;
+  background-color: var(--brand-color__primary-0);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__div {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__list,
+.nav__item {
+  display: flex;
+}
+
+.footer {
+  margin-bottom: 0;
+  height: 93px;
+}
+
+.footer__text {
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 24px;
+  color: var(--neutral-color__neutral-2);
+  text-align: center;
+}
