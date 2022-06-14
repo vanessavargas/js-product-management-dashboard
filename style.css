@@ -6,12 +6,29 @@
   --neutral-color__neutral-1: #292929;
   --neutral-color__neutral-2: #666666;
   --neutral-color__neutral-3: #a3a3a3;
+  --neutral-color__neutral-4: #cccccc;
+  --neutral-color__neutral-5: #e0e0e0;
+  --neutral-color__neutral-6: #f5f5f5;
+  --neutral-color__neutral-7: #ffffff;
 }
+/*
+Título: Segoe UI, 20, Regular;
+Subtítulo-1: Segoe UI, 17, Semibold;
+Subtítulo-2: Segoe UI, 17, Semilight;
+p:Segoe UI, 17, Regular;
+botao: Montserrat, 17, semibold;
+legend: Segoe UI, 12, Regular;
+
+font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+*/
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: none;
+  box-sizing: 0;
   list-style: none;
 }
 
@@ -40,16 +57,21 @@
 }
 
 .footer {
-  margin-bottom: 0;
+  position: absolute;
+  bottom: 0;
   height: 93px;
+  background-color: var(--neutral-color__neutral-6);
+  justify-content: center;
 }
 
 .footer__text {
+  margin: auto;
+  left: 0;
+  right: 0;
   font-family: "Segoe UI";
   font-style: normal;
   font-weight: 400;
   font-size: 17px;
   line-height: 24px;
   color: var(--neutral-color__neutral-2);
-  text-align: center;
 }
