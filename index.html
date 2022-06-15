@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Restaurante Itacolomi</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header class="header">
@@ -15,7 +21,7 @@
           src="assets/logo.svg"
           alt="logotipo do Restaurante Itacolomi"
         />
-        <p class="header__title__text">Olá, Joana!</p>
+        <p class="header__title__text">Olá, Vanessa!</p>
       </div>
       <div class="header__exit">
         <img
@@ -26,51 +32,111 @@
         <p class="header__exit__text">Sair</p>
       </div>
     </header>
-    
+
     <main>
-      <div id="categories">
+      <div class="categories">
         <!-- Aqui irão os botões das categorias, via api
         Teste de estilização -->
-        <button class="button__habilitado--tertiary" type="submit">
+        <div class="categories__container"  id="categories">
+        <button class="btn btn__habilitado--tertiary" type="submit">
           Sobremesas
         </button>
-        <button class="button__habilitado--tertiary" type="submit">
+        <button class="btn btn__habilitado--tertiary" type="submit">
           Sobremesas
         </button>
-        <button class="button__habilitado--tertiary" type="submit">
+        <button class="btn btn__habilitado--tertiary" type="submit">
           Sobremesas
         </button>
-        <button class="button__habilitado--tertiary" type="submit">
+        <button class="btn btn__habilitado--tertiary" type="submit">
           Sobremesas
         </button>
       </div>
-      <div class="nav">
-        <div class="nav__item">
-          <img
-            class="nav__item__img"
-            src="assets/icons/ic_produtos.svg"
-            alt="icone de sacola"
-          />
-          <p class="nav__item__text">Produtos cadastrados</p>
+      </div>
+
+      <div class="filters">
+        <div class="filters__products">
+          <div class="filters__products__all">
+            <img
+              class="filters__products__all--img"
+              src="assets/icons/ic_produtos.svg"
+              alt="icone de sacola"
+            />
+            <label for="">Produtos cadastrados</label>
+          </div>
           <input
-            class="nav__item__search"
+            class="filters__products__search"
             type="search"
             value="Buscar na categoria"
           />
         </div>
 
-        <div class="nav__item">
-          <select class="nav__item__select" id="ordem" name="ordem">
-            <option value="">Ordenar por (1)</option>
-            <option value="maior">Maior preço</option>
-            <option value="menor">Menor preço</option>
-          </select>
+        <div class="filters__order">
+          <ul>
+            <li>
+              <label for="">Ordenar por (1)</label>
+              <ul>
+                <li><a href="#">Maior preço</a></li>
+                <li><a href="#">Menor preço</a></li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </div>
-      <section class="produtos">
-        <a href="cadastrar.html">Cadastrar Produtos</a>
-        <a href="editar.html">Cadastrar Produtos</a>
-      </section>
+      <!--  
+
+
+      <div id="products" class="products">
+         Conteúdo dos produtos 
+        <div class="products__content">
+          <div id="sem-cadastro" class="products__content__sem-cadastro">
+            <img src="assets/empty_state.svg" alt="imagens de folhas" />
+            <p class="products__content__sem-cadastro--title">
+              Ops!
+              <br />
+              Nenhum produto cadastrado
+            </p>
+            <p class="products__content__sem-cadastro--text">
+              Cadastre o seu primeiro produto e comece a vender agora mesmo
+            </p>
+          </div>
+          <div id="com-cadastro" class="products__content__com-cadastro">
+            <div class="products__content__com-cadastro__card--disponível">
+              <img src="" alt="" />
+              <div class="description">
+                <h3></h3>
+                <p></p>
+                <p></p>
+                <p></p>
+              </div>
+              <div class="options">
+                <a href=""
+                  ><img
+                    src="assets/icons/ic_edit.svg"
+                    alt="ícone de editar"
+                  />Editar</a
+                >
+                <a href=""
+                  ><img
+                    src="assets/icons/ic_delete.svg"
+                    alt="ícone de excluir"
+                  />Excluir</a
+                >
+              </div>
+            </div>
+            <div
+              class="products__content__com-cadastro__card--indisponível"
+            ></div>
+          </div>
+        </div>
+      </div>
+
+       -->
+      <hr />
+      Link para teste das outras páginas
+      <div>
+        <a href="cadastrar.html" target="_blank">Cadastrar Produtos</a>
+        <a href="editar.html" target="_blank">Cadastrar Produtos</a>
+      </div>
     </main>
 
     <footer class="footer">
@@ -88,12 +154,12 @@
               Deseja realmente apagar este produto?
             </p>
             <input
-              class="modal__content__body--input-yes"
+              class="btn modal__content__body--input-yes"
               type="submit"
               value="Sim, apagar"
             />
             <input
-              class="modal__content__body--input-no"
+              class="btn modal__content__body--input-no"
               type="submit"
               value="Não"
             />
