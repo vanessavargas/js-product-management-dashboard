@@ -82,76 +82,83 @@
           </ul>
         </div>
       </div>
+
       <div id="itemsProd" class="products">
         <div class="products__content">
-          <div id="sem-cadastro" class="products__content__sem-cadastro">
-            <img src="assets/empty_state.svg" alt="imagens de folhas" />
-            <p class="products__content__sem-cadastro--title">
-              Ops!
-              <br />
-              Nenhum produto cadastrado
-            </p>
-            <p class="products__content__sem-cadastro--text">
-              Cadastre o seu primeiro produto e comece a vender agora mesmo
-            </p>
-            <input class="btn btn__habilitado--primary" type="submit" value="Cadastrar produtos">
+          <div class="products__content__sem-cadastro">
+            <div class="products__content__sem-cadastro--img">
+              <img src="assets/empty_state.svg" alt="imagens de folhas" />
+            </div>
+            <div>
+              <p class="products__content__sem-cadastro--title">
+                Ops!
+                <br />
+                Nenhum produto cadastrado
+              </p>
+            </div>
+            <div>
+              <p class="products__content__sem-cadastro--text">
+                Cadastre o seu primeiro produto e comece a vender agora mesmo
+              </p>
+            </div>
+            <div>
+              <input
+                class="btn btn__habilitado--primary"
+                type="submit"
+                value="Cadastrar produtos"
+              />
+            </div>
           </div>
-        </div>
-        <div id="com-cadastro" class="products__content__com-cadastro">
-          <div class="products__content__com-cadastro__card--disponível"></div>
-          <div
-            class="products__content__com-cadastro__card--indisponível"
-          ></div>
-        </div>
-      </div>
-      <!--
-      
-      <div id="itemsProd" class="products">
-        Conteúdo dos produtos
-        <div class="products__content">
-          <div id="sem-cadastro" class="products__content__sem-cadastro">
-            <img src="assets/empty_state.svg" alt="imagens de folhas" />
-            <p class="products__content__sem-cadastro--title">
-              Ops!
-              <br />
-              Nenhum produto cadastrado
-            </p>
-            <p class="products__content__sem-cadastro--text">
-              Cadastre o seu primeiro produto e comece a vender agora mesmo
-            </p>
-          </div>
+
           <div id="com-cadastro" class="products__content__com-cadastro">
-            <div class="products__content__com-cadastro__card--disponível">
-              <img src="" alt="" />
-              <div class="description">
-                <h3></h3>
-                <p></p>
-                <p></p>
-                <p></p>
-              </div>
-              <div class="options">
-                <a href=""
-                  ><img
-                    src="assets/icons/ic_edit.svg"
-                    alt="ícone de editar"
-                  />Editar</a
+            <div class="products__content__com-cadastro__card">
+              <div class="products__content__com-cadastro__card--disponível">
+                <div
+                  class="products__content__com-cadastro__card--disponível-box-img"
                 >
-                <a href=""
-                  ><img
-                    src="assets/icons/ic_delete.svg"
-                    alt="ícone de excluir"
-                  />Excluir</a
+                  <img src="" alt="" />
+                </div>
+
+                <div
+                  class="products__content__com-cadastro__card--disponível-box-text"
                 >
+                  <h3 class="title">Teste</h3>
+                  <p class="subtitle">Teste</p>
+                  <p class="description">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Fuga,
+                  </p>
+                  <p class="value">R$ <span>150,00</span></p>
+                </div>
+
+                <div
+                  class="products__content__com-cadastro__card--disponível-box-line"
+                ></div>
+
+                <div
+                  class="products__content__com-cadastro__card--disponível-box-options"
+                >
+                  <div>
+                    <img
+                      src="assets/icons/ic_edit.svg"
+                      alt="ícone de editar"
+                    />
+                    <p class="options">Editar</p>
+                  </div>
+                  <div>
+                    <img
+                      src="assets/icons/ic_delete.svg"
+                      alt="ícone de excluir"
+                    />
+                    <p class="options">Excluir</p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div
-              class="products__content__com-cadastro__card--indisponível"
-            ></div>
           </div>
         </div>
       </div>
-      -->
-      <hr />
+
       Link para teste das outras páginas
       <div>
         <a href="cadastrar.html" target="_blank">Cadastrar Produtos</a>
