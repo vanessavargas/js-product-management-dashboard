@@ -37,20 +37,20 @@
       <div class="categories">
         <!-- Aqui irão os botões das categorias, via api
         Teste de estilização -->
-        <div class="categories__container"  id="categories">
-        <button class="btn btn__habilitado--tertiary" type="submit">
-          Sobremesas
-        </button>
-        <button class="btn btn__habilitado--tertiary" type="submit">
-          Sobremesas
-        </button>
-        <button class="btn btn__habilitado--tertiary" type="submit">
-          Sobremesas
-        </button>
-        <button class="btn btn__habilitado--tertiary" type="submit">
-          Sobremesas
-        </button>
-      </div>
+        <div class="categories__container" id="itemsCat">
+          <button class="btn btn__habilitado--tertiary" type="submit">
+            Sobremesas
+          </button>
+          <button class="btn btn__habilitado--tertiary" type="submit">
+            Sobremesas
+          </button>
+          <button class="btn btn__habilitado--tertiary" type="submit">
+            Sobremesas
+          </button>
+          <button class="btn btn__habilitado--tertiary" type="submit">
+            Sobremesas
+          </button>
+        </div>
       </div>
 
       <div class="filters">
@@ -72,9 +72,9 @@
 
         <div class="filters__order">
           <ul>
-            <li>
-              <label for="">Ordenar por (1)</label>
-              <ul>
+            <li class="filters__order__select">
+              Ordenar por (1)
+              <ul class="filters__order__select__options">
                 <li><a href="#">Maior preço</a></li>
                 <li><a href="#">Menor preço</a></li>
               </ul>
@@ -82,11 +82,32 @@
           </ul>
         </div>
       </div>
-      <!--  
-
-
-      <div id="products" class="products">
-         Conteúdo dos produtos 
+      <div id="itemsProd" class="products">
+        <div class="products__content">
+          <div id="sem-cadastro" class="products__content__sem-cadastro">
+            <img src="assets/empty_state.svg" alt="imagens de folhas" />
+            <p class="products__content__sem-cadastro--title">
+              Ops!
+              <br />
+              Nenhum produto cadastrado
+            </p>
+            <p class="products__content__sem-cadastro--text">
+              Cadastre o seu primeiro produto e comece a vender agora mesmo
+            </p>
+            <input class="btn btn__habilitado--primary" type="submit" value="Cadastrar produtos">
+          </div>
+        </div>
+        <div id="com-cadastro" class="products__content__com-cadastro">
+          <div class="products__content__com-cadastro__card--disponível"></div>
+          <div
+            class="products__content__com-cadastro__card--indisponível"
+          ></div>
+        </div>
+      </div>
+      <!--
+      
+      <div id="itemsProd" class="products">
+        Conteúdo dos produtos
         <div class="products__content">
           <div id="sem-cadastro" class="products__content__sem-cadastro">
             <img src="assets/empty_state.svg" alt="imagens de folhas" />
@@ -129,8 +150,7 @@
           </div>
         </div>
       </div>
-
-       -->
+      -->
       <hr />
       Link para teste das outras páginas
       <div>

@@ -11,7 +11,7 @@
   --neutral-color__neutral-6: #f5f5f5;
   --neutral-color__neutral-7: #ffffff;
   --font-title-1: normal 20px Segoe UI;
-  --font-paragrafo: normal 17px Segoe UI;
+  --font-paragrafo: normal 17px/24px Segoe UI;
   --font-subtitle-1: 600 17px Segoe UI;
   --font-subtitle-2: 200 17px Segoe UI;
   --font-button: 600 17px Montserrat;
@@ -78,6 +78,8 @@ body {
 .categories__container {
   padding-right: 2.4vw; /*32px;*/
   padding-left: 4.8vw; /*64px;*/
+  display: flex;
+  justify-content: space-between;
 }
 
 .categories__container .btn {
@@ -199,13 +201,14 @@ body {
   padding-left: 16px;
 }
 
-.filters__order ul li {
+.filters__order__select {
   display: inline;
   position: relative;
 }
 
-.filters__order ul li a {
-  color: #262626;
+.filters__order__select__options li a {
+  color: #000000;
+  font: var(--font-paragrafo);
   text-decoration: none;
   display: inline-block;
   transition: background 0.8s;
@@ -216,18 +219,23 @@ body {
 }
 
 /*options*/
-.filters__order ul ul {
+.filters__order__select:hover ul {
+  display: block;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.filters__order__select__options {
   display: none;
   left: 0;
   position: absolute;
-}
-
-.filters__order ul li:hover ul {
-  display: block;
-}
-
-.filters__order ul ul {
-  width: 150px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  margin-right: 5em; /* 64.5px;*/
+  margin-top: 12px;
+  padding: 16px;
+  border-radius: 16px;
+  width: 11em; /* 189px; */
+  height: 96px;
 }
 
 .filters__order ul ul li a {
@@ -289,10 +297,11 @@ body {
 
 /*products*/
 .products {
-  width: 100%;
+  display: none;
   display: flex;
+  width: 100%;
+  margin-top:36px;
   justify-content: center;
-  margin-top: 32px;
 }
 
 .products__content__sem-cadastro--title {
@@ -305,10 +314,26 @@ body {
   font: var(--font-subtitle-2);
   color: var(--neutral-color__neutral-0);
   text-align: center;
+  /*
   margin-top: 16px;
   margin-bottom: 215px;
   width: 14.3em; /* 244px;*/
 }
+
+.products__content__com-cadastro{
+  display: none;
+}
+  /*
+
+.products__content {
+  display: flex;
+  justify-content: center;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+
+
 
 .products__content__com-cadastro__card--disponível {
   background-color: var(--neutral-color__neutral-6);
@@ -316,6 +341,7 @@ body {
   height: 196px;
   border-radius: 16px;
 }
+*/
 
 .footer {
   width: 100%;
