@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Restaurante Itacolomi - Cadastrar</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="style2.css" />
   </head>
   <body>
     <header class="header">
@@ -27,10 +26,108 @@
         <p class="header__exit__text">Sair</p>
       </div>
     </header>
+    <main class="registration">
+      <input
+        class="registration__img"
+        type="image"
+        src="assets/icons/ic_back.svg"
+        onclick="back()"
+        alt="ícone para voltar à página anterior"
+      />
+      <div class="registration__content">
+        <div class="registration__title">
+          <div class="registration__title__title">
+            <img
+              src="assets/icons/ic_produtos.svg"
+              alt="ícone de sacola de produtos"
+            />
+            <h3 class="registration__title__title__text">Cadastrar Produtos</h3>
+          </div>
+          <p class="registration__title__legenda">Etapa 1 de 2</p>
+        </div>
+      </div>
+
+      <div class="registration__content">
+        <div class="registration__form">
+          <div class="label-float">
+            <input type="text" placeholder=" " required />
+            <label>Nome do produto</label>
+          </div>
+          <form name="registration__content__textarea">
+            <textarea
+              name="textarea"
+              id="text"
+              maxlength="200"
+              cols="30"
+              rows="5"
+              oninput="countText()"
+              placeholder="Descrição"
+            >
+            </textarea
+            ><br />
+            <p><span id="characters"></span>/200</p>
+          </form>
+          <div class="label-float">
+            <input type="number" placeholder=" " />
+            <label>Valor (R$)</label>
+          </div>
+          <select name="category" id="">
+            <option value="">Categoria</option>
+            <option value="prato-completo">Prato completo</option>
+            <option value="sobremesa">Sobremesa</option>
+            <option value="bebida">Bebida</option>
+            <option value="acompanhamento">Acompanhamento</option>
+          </select>
+          <div>
+            <label for="">Para quantas pessoas</label>
+            <p>
+              Serve 1 pessoa<input
+                type="radio"
+                name="quantidade"
+                id=""
+                value="uma-pessoa"
+              />
+              <br />
+              Serve 2 pessoas
+              <input
+                type="radio"
+                name="quantidade"
+                id=""
+                value="duas-pessoas"
+              /><br />
+              Família - até 4 pessoas<input
+                type="radio"
+                name="quantidade"
+                id=""
+                value="familia"
+              />
+              <br />
+            </p>
+            <p>
+              Produto disponível<input
+                type="radio"
+                name="disponibilidade"
+                id=""
+                value="true"
+              />
+              <br />
+              Produto indisponível
+              <input
+                type="radio"
+                name="disponibilidade"
+                id=""
+                value="false"
+              /><br />
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
     <footer class="footer">
       <div class="footer__text">
         <p>2022 | Usemobile. Todos direitos reservados.</p>
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
