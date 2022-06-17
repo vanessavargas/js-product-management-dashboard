@@ -46,80 +46,109 @@
           <p class="registration__title__legenda">Etapa 1 de 2</p>
         </div>
       </div>
-
+      
       <div class="registration__content">
         <div class="registration__form">
-          <div class="label-float">
+          <div class="registration__form__label-float">
             <input type="text" placeholder=" " required />
             <label>Nome do produto</label>
           </div>
-          <form name="registration__content__textarea">
-            <textarea
-              name="textarea"
-              id="text"
-              maxlength="200"
-              cols="30"
-              rows="5"
-              oninput="countText()"
-              placeholder="Descrição"
-            >
-            </textarea
-            ><br />
-            <p><span id="characters"></span>/200</p>
-          </form>
-          <div class="label-float">
+
+          <div class="registration__form__label-float">
             <input type="number" placeholder=" " />
             <label>Valor (R$)</label>
           </div>
-          <select name="category" id="">
-            <option value="">Categoria</option>
+
+          <form
+            class="registration__form__label-float"
+            id="formulario"
+            method="post"
+            action=""
+          >
+            <textarea
+              name=""
+              onkeyup="contarCaracter(this.value)"
+              type="text"
+              id="nome"
+              maxlength="200"
+              placeholder=" "
+              cols="30"
+              rows="10"
+            ></textarea>
+            <label>Descrição</label>
+            <input
+              class="registration__form__characters"
+              value="0/200"
+              type="text"
+              id="quantidade"
+            />
+          </form>
+
+          <select class="registration__form__select" name="category" id="">
+            <option disabled selected style="display: none">Categoria</option>
             <option value="prato-completo">Prato completo</option>
             <option value="sobremesa">Sobremesa</option>
             <option value="bebida">Bebida</option>
             <option value="acompanhamento">Acompanhamento</option>
           </select>
-          <div>
-            <label for="">Para quantas pessoas</label>
-            <p>
-              Serve 1 pessoa<input
+
+          <div class="registration__form__radio">
+            <div>
+              <label for="">Para quantas pessoas</label>
+            </div>
+            <div>
+              <input
                 type="radio"
                 name="quantidade"
                 id=""
                 value="uma-pessoa"
-              />
-              <br />
-              Serve 2 pessoas
+              />Serve 1 pessoa
+            </div>
+            <div>
               <input
                 type="radio"
                 name="quantidade"
                 id=""
                 value="duas-pessoas"
-              /><br />
-              Família - até 4 pessoas<input
+              />Serve 2 pessoas
+            </div>
+            <div>
+              <input
                 type="radio"
                 name="quantidade"
                 id=""
                 value="familia"
-              />
-              <br />
-            </p>
-            <p>
-              Produto disponível<input
+              />Família - até 4 pessoas
+            </div>
+          </div>
+
+          <div class="registration__form__radio">
+            <div>
+              <label for="">Para quantas pessoas</label>
+            </div>
+            <div>
+              <input
                 type="radio"
                 name="disponibilidade"
                 id=""
                 value="true"
-              />
-              <br />
-              Produto indisponível
+              />Produto disponível
+            </div>
+            <div>
               <input
                 type="radio"
                 name="disponibilidade"
                 id=""
                 value="false"
-              /><br />
-            </p>
+              />Produto indisponível
+            </div>
           </div>
+
+          <input
+            class="registration__form__btn-form btn btn__habilitado--primary"
+            type="submit"
+            value="Próximo"
+          />
         </div>
       </div>
     </main>

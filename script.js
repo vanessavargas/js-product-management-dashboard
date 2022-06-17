@@ -153,7 +153,11 @@ function back() {
   window.history.back();
 }
 
-function countText() {
-  let text = document.registration__content__textarea.text.value;
-  document.getElementById("characters").innerText = text.length;
+function contarCaracter(valor) {
+  var cont = valor.length;
+  if (cont == 1 || cont == 0) {
+    document.getElementById("quantidade").value = cont + "/200";
+  } else {
+    document.getElementById("quantidade").value = cont + "/200";
+  }
 }
