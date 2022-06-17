@@ -541,3 +541,39 @@ body {
   width: 192px;
   float: right;
 }
+
+.registration__description {
+  font: var(--font-paragrafo);
+  color: var(--brand-color__primary-1);
+  margin-top: 32px;
+  width: 640px;
+}
+
+.registration__uploads {
+  display: grid;
+  grid-template-columns: 642px;
+  grid-template-rows: 248px 210px 51px;
+  grid-gap: 32px;
+  font: var(--font-paragrafo);
+  color: var(--neutral-color__neutral-2);
+  margin-top: 83px;
+  margin-bottom: 153px;
+}
+
+.registration__uploads__box {
+  background-color: var(--neutral-color__neutral-6);
+  border: 1px solid var(--brand-color__primary-1);
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.registration__uploads__box__box {
+  width: 241px;
+  text-align: center;
+}
+
+.registration__uploads input {
+  float: right;
+}
