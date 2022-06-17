@@ -463,15 +463,19 @@ body {
   height: 914px;
   width: 640px;
   margin-top: 26px;
-  background-color: #666666;
 }
 
-.label-float {
+.registration__form__label-float {
   position: relative;
-  padding-top: 13px;
+  margin-bottom: 32px;
+  padding-top: 16px;
+  font: var(--font-paragrafo);
+  color: var(--neutral-color__neutral-2);
 }
 
-.label-float input {
+.registration__form__label-float input,
+.registration__form__label-float textarea,
+.registration__form__select {
   border-color: var(--brand-color__primary-1);
   font: var(--font-paragrafo);
   color: var(--neutral-color__neutral-2);
@@ -482,22 +486,58 @@ body {
   transition: all 0.3s ease-out;
 }
 
-.label-float label {
+.registration__form__characters {
+  text-align: right;
+  border: none;
+  margin-top: 4px;
+  color: var(--brand-color__primary-0);
+}
+
+.registration__form__select {
+  margin-bottom: 32px;
+  padding-left: 16px;
+}
+
+.registration__form__select option {
+  color: var(--brand-color__primary-1);
+}
+
+.registration__form__label-float label {
   pointer-events: none;
   position: absolute;
   top: 8px;
   left: 0;
-  margin-top: 20px;
+  margin-top: 24px;
   transition: all 0.3s ease-out;
+  margin-left: 16px;
 }
 
-.label-float input:required:invalid + label {
+.registration__form__label-float input:focus + label,
+.registration__form__label-float input:not(:placeholder-shown) + label,
+.registration__form__label-float textarea:focus + label,
+.registration__form__label-float textarea:not(:placeholder-shown) + label {
+  font: var(--font-legend);
+  margin-top: -4px;
   color: var(--brand-color__primary-1);
+  background-color: var(--neutral-color__neutral-7);
+  margin-left: 16px;
 }
 
-.label-float input:focus + label,
-.label-float input:not(:placeholder-shown) + label {
-  font-size: 13px;
-  margin-top: 0;
-  color: var(--brand-color__primary-1);
+.registration__form__radio {
+  display: grid;
+  grid-template-columns: 202px;
+  grid-template-rows: repeat(4 24px);
+  gap: 20px;
+  font: var(--font-paragrafo);
+  color: var(--neutral-color__neutral-0);
+  margin-bottom: 15px;
+}
+
+.registration__form__radio input {
+  margin-right: 8px;
+}
+
+.registration__form__btn-form {
+  width: 192px;
+  float: right;
 }
