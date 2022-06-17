@@ -32,122 +32,128 @@ function getCategory(url) {
 }
 
 function createItemsCategories(data) {
-    const div = document.getElementById("itemsCat");
-    div.innerHTML = "";
-    for (let item of data) {
-      const d = document.createElement("div");
-      d.setAttribute("class", "item");
-      d.append(createTag("p", `${item.name.toUpperCase()}`));
-      d.addEventListener("click", function () {
-        getCategory(defaultUrl + `/${item.name}`);
-      });
-      div.append(d);
-    }
+  const div = document.getElementById("itemsCat");
+  div.innerHTML = "";
+  for (let item of data) {
+    const d = document.createElement("div");
+    d.setAttribute("class", "item");
+    d.append(createTag("p", `${item.name.toUpperCase()}`));
+    d.addEventListener("click", function () {
+      getCategory(defaultUrl + `/${item.name}`);
+    });
+    div.append(d);
   }
+}
 
 //PRODUCTS - pegando informações da api para criar itens e botões de paginação
 function getProducts(url) {
-    return axios({
-      method: "GET",
-      url,
-      data: {
-        limit: 5,
-      },
-    }).then((response) => {
-      createItemsProducts(response.data.results);
-      createButtons(response.data);
+  return axios({
+    method: "GET",
+    url,
+    data: {
+      limit: 5,
+    },
+  }).then((response) => {
+    createItemsProducts(response.data.results);
+    createButtons(response.data);
+  });
+}
+
+//alterar essas funções para exibir os produtos
+function getProduct(url) {
+  return axios({
+    method: "GET",
+    url,
+  }).then((response) => {
+    populateListProdContent(response.data);
+    openModal();
+  });
+}
+
+function createItemsProducts(data) {
+  const div = document.getElementById("itemsProd");
+  div.innerHTML = "";
+  for (let item of data) {
+    const d = document.createElement("div");
+    d.setAttribute("class", "item");
+    d.append(createTag("p", `${item.name.toUpperCase()}`));
+    d.addEventListener("click", function () {
+      getProduct(defaultUrl + `/${item.name}`);
     });
+    div.append(d);
   }
-  
-  //alterar essas funções para exibir os produtos
-  function getProduct(url) {
-    return axios({
-      method: "GET",
-      url,
-    }).then((response) => {
-        populateListProdContent(response.data);
-      openModal();
-    });
+}
+
+//paginação (fazer em números)
+function createButtons(data) {
+  const div = document.getElementById("buttons");
+  div.innerHTML = "";
+
+  if (data.previous) {
+    div.append(createButton("Anterior", data.previous));
   }
 
-  function createItemsProducts(data) {
-    const div = document.getElementById("itemsProd");
-    div.innerHTML = "";
-    for (let item of data) {
-      const d = document.createElement("div");
-      d.setAttribute("class", "item");
-      d.append(createTag("p", `${item.name.toUpperCase()}`));
-      d.addEventListener("click", function () {
-        getProduct(defaultUrl + `/${item.name}`);
-      });
-      div.append(d);
-    }
+  if (data.next) {
+    div.append(createButton("Próximo", data.next));
   }
+}
 
+function createTag(type, text) {
+  const tag = document.createElement(type);
+  const value = document.createTextNode(text);
+  tag.append(value);
+  return tag;
+}
 
-  //paginação (fazer em números)
-  function createButtons(data) {
-    const div = document.getElementById("buttons");
-    div.innerHTML = "";
-  
-    if (data.previous) {
-      div.append(createButton("Anterior", data.previous));
-    }
-  
-    if (data.next) {
-      div.append(createButton("Próximo", data.next));
-    }
-  }
-  
-  function createTag(type, text) {
-    const tag = document.createElement(type);
-    const value = document.createTextNode(text);
-    tag.append(value);
-    return tag;
-  }
-  
-  function createButton(name, url) {
-    const b = createTag("button", name);
-    const arrUrl = url.split("&")[0] + "&limit=5";
-    b.setAttribute("class", "btn");
-    b.addEventListener(
-      "click",
-      function () {
-        getProducts(url);
-      },
-      false
-    );
-    return b;
-  }
+function createButton(name, url) {
+  const b = createTag("button", name);
+  const arrUrl = url.split("&")[0] + "&limit=5";
+  b.setAttribute("class", "btn");
+  b.addEventListener(
+    "click",
+    function () {
+      getProducts(url);
+    },
+    false
+  );
+  return b;
+}
 
+//preencher campos dos produtos
+function populateListProdContent(item) {
+  const div = document.getElementsByClassName("modal-body")[0];
+  div.innerHTML = "";
 
+  const h3 = createTag("h3", item.name.toUpperCase());
 
-  //preencher campos dos produtos
-  function populateListProdContent(item) {
-    const div = document.getElementsByClassName("modal-body")[0];
-    div.innerHTML = "";
-  
-    const h3 = createTag("h3", item.name.toUpperCase());
-  
-    const divImg = createTag("div", "");
-    divImg.setAttribute("class", "modal-div-img");
-  
-    const frontImg = createTag("img", "");
-    frontImg.setAttribute("src", item.sprites.front_default);
-  
-    const backImg = createTag("img", "");
-    backImg.setAttribute("src", item.sprites.back_default);
-  
-    divImg.append(frontImg);
-    divImg.append(backImg);
-    div.append(h3);
-    div.append(divImg);
-  }
-  
+  const divImg = createTag("div", "");
+  divImg.setAttribute("class", "modal-div-img");
+
+  const frontImg = createTag("img", "");
+  frontImg.setAttribute("src", item.sprites.front_default);
+
+  const backImg = createTag("img", "");
+  backImg.setAttribute("src", item.sprites.back_default);
+
+  divImg.append(frontImg);
+  divImg.append(backImg);
+  div.append(h3);
+  div.append(divImg);
+}
+
 function openListProd() {
   modal.style.display = "flex";
 }
 
 function closeListProd() {
-    modal.style.display = "none";
-  }
+  modal.style.display = "none";
+}
+
+function back() {
+  window.history.back();
+}
+
+function countText() {
+  let text = document.registration__content__textarea.text.value;
+  document.getElementById("characters").innerText = text.length;
+}

@@ -87,6 +87,7 @@ body {
   width: 22.3vw; /*18em; 304px;*/
   min-width: 9.5vw; /*130px*/
 }
+
 .btn__habilitado--primary,
 .btn__selecionado--primary,
 .modal__content__body--input-yes {
@@ -302,7 +303,7 @@ body {
   grid-template-columns: 302px;
   grid-template-rows: 157.89px 54px 54px 51px;
   grid-gap: 16px;
-  display: none; /*tirar*/
+  /*display: none; tirar*/
 }
 
 .products__content__sem-cadastro--img {
@@ -323,7 +324,7 @@ body {
 }
 
 .products__content__com-cadastro {
-  /*display: none;*/
+  display: none;
   margin-top: 32px;
 }
 
@@ -422,4 +423,81 @@ body {
 .footer__text {
   font: var(--font-paragrafo);
   color: var(--neutral-color__neutral-2);
+}
+
+/*Cadastros*/
+.registration {
+  width: 100%;
+}
+
+.registration__img {
+  margin-top: 40px;
+  margin-left: 64px;
+}
+
+.registration__title {
+  margin-top: 64px;
+  width: 640px;
+}
+
+.registration__title__title {
+  display: flex;
+  font: var(--font-subtitle-1);
+}
+
+.registration__title__title__text {
+  margin-left: 8px;
+}
+
+.registration__title__legenda {
+  font: var(--font-legend);
+  margin-top: 8px;
+}
+
+.registration__content {
+  display: flex;
+  justify-content: center;
+}
+
+.registration__form {
+  height: 914px;
+  width: 640px;
+  margin-top: 26px;
+  background-color: #666666;
+}
+
+.label-float {
+  position: relative;
+  padding-top: 13px;
+}
+
+.label-float input {
+  border-color: var(--brand-color__primary-1);
+  font: var(--font-paragrafo);
+  color: var(--neutral-color__neutral-2);
+  outline: none;
+  border-radius: 16px;
+  width: 640px;
+  height: 56px;
+  transition: all 0.3s ease-out;
+}
+
+.label-float label {
+  pointer-events: none;
+  position: absolute;
+  top: 8px;
+  left: 0;
+  margin-top: 20px;
+  transition: all 0.3s ease-out;
+}
+
+.label-float input:required:invalid + label {
+  color: var(--brand-color__primary-1);
+}
+
+.label-float input:focus + label,
+.label-float input:not(:placeholder-shown) + label {
+  font-size: 13px;
+  margin-top: 0;
+  color: var(--brand-color__primary-1);
 }
