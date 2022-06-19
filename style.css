@@ -108,7 +108,6 @@ body {
 }
 
 .btn__habilitado--tertiary {
-  border: none;
   border-color: var(--neutral-color__neutral-0);
   color: var(--neutral-color__neutral-0);
   background-color: var(--neutral-color__neutral-7);
@@ -116,14 +115,12 @@ body {
 
 .btn__habilitado--tertiary:active,
 .btn__habilitado--tertiary:hover {
-  border: none;
   border-color: var(--brand-color__secondary-0);
   color: var(--brand-color__secondary-0);
 }
 
 .btn__selecionado--tertiary {
   background-color: var(--neutral-color__neutral-7);
-  border: none;
   border-color: var(--brand-color__secondary-0);
   color: var(--brand-color__secondary-0);
 }
