@@ -70,16 +70,23 @@
           />
         </div>
 
-        <div class="filters__order">
-          <ul>
-            <li class="filters__order__select">
+        <div>
+          <select class="filters__order1" name="category" id="">
+            <option
+              class=".filters__order__select1"
+              disabled
+              selected
+              style="display: none"
+            >
               Ordenar por (1)
-              <ul class="filters__order__select__options">
-                <li><a href="#">Maior preço</a></li>
-                <li><a href="#">Menor preço</a></li>
-              </ul>
-            </li>
-          </ul>
+            </option>
+            <option class="filters__order__select1" value="maior-preco">
+              Maior preço
+            </option>
+            <option class="filters__order__select1" value="menor-preco">
+              Menor preço
+            </option>
+          </select>
         </div>
       </div>
 
