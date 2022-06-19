@@ -502,13 +502,6 @@ body {
   outline: 0;
 }
 
-.registration__form__characters {
-  text-align: right;
-  border: none;
-  margin-top: 4px;
-  color: var(--brand-color__primary-0);
-}
-
 .registration__form__select {
   margin-bottom: 32px;
   padding-left: 16px;
@@ -537,6 +530,12 @@ body {
   color: var(--brand-color__primary-1);
   background-color: var(--neutral-color__neutral-7);
   margin-left: 16px;
+}
+
+.registration__form__characters {
+  text-align: right;
+  border: none !important;
+  color: var(--brand-color__primary-0);
 }
 
 .registration__form__radio {
@@ -592,6 +591,7 @@ body {
 
 .registration__uploads input {
   float: right;
+  width: 192px;
 }
 
 .box1 {
