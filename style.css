@@ -277,6 +277,7 @@ body {
 .products {
   width: 100%;
   height: 644px;
+  margin-bottom: 122px;
 }
 
 .products__content {
@@ -290,7 +291,6 @@ body {
   grid-template-columns: 302px;
   grid-template-rows: 157.89px 54px 54px 51px;
   grid-gap: 16px;
-  /*display: none; tirar*/
 }
 
 .products__content__sem-cadastro--img {
@@ -319,6 +319,7 @@ body {
   background-color: var(--neutral-color__neutral-6);
   width: 640px;
   height: 196px;
+  margin-bottom: 32px;
   border-radius: 16px;
   display: flex;
   justify-content: center;
@@ -370,6 +371,11 @@ body {
   font: var(--font-paragrafo);
 }
 
+.options {
+  color: var(--neutral-color__neutral-0);
+  font: var(--font-paragrafo);
+}
+
 .products__content__com-cadastro__card--disponível-box-options {
   margin: 11px 0;
   display: flex;
@@ -381,9 +387,9 @@ body {
   text-align: center;
 }
 
-.options {
-  color: var(--neutral-color__neutral-0);
-  font: var(--font-paragrafo);
+.products__content__com-cadastro__btn {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .footer {
@@ -514,8 +520,18 @@ body {
   margin-bottom: 15px;
 }
 
-.registration__form__radio input {
+.registration__form__radio__input {
+  -webkit-appearance: none;
+  border: 1px solid var(--brand-color__primary-0);
+  background-color: var(--neutral-color__neutral-6);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
   margin-right: 8px;
+}
+
+.registration__form__radio__input:checked {
+  background-color: var(--brand-color__primary-0);
 }
 
 .registration__form__btn-form {
