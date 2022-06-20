@@ -81,11 +81,12 @@ body {
 
 /*botões*/
 .btn {
-  font: var(--font-button);
   border-radius: 16px;
   height: 7.8vh; /*51px;*/
   width: 22.3vw; /*18em; 304px;*/
   min-width: 9.5vw; /*130px*/
+  text-align: center;
+  font: var(--font-button);
 }
 
 .btn__habilitado--primary,
@@ -93,12 +94,15 @@ body {
 .modal__content__body--input-yes {
   background-color: var(--brand-color__primary-1);
   color: var(--neutral-color__neutral-7);
+  border: none;
   border-color: var(--brand-color__primary-1);
+  font: var(--font-button);
 }
 
 .btn__habilitado--secondary,
 .btn__selecionado--secondary,
 .modal__content__body--input-no {
+  border: none;
   border-color: var(--brand-color__primary-1);
   color: var(--brand-color__primary-1);
 }
@@ -124,10 +128,13 @@ body {
 .btn__desabilitado--primary {
   background-color: var(--neutral-color__neutral-3);
   color: var(--neutral-color__neutral-7);
+  border: none;
+  font: var(--font-button);
 }
 
 .btn__desabilitado--secondary,
 .btn__desabilitado--terciary {
+  border: none;
   border-color: var(--neutral-color__neutral-3);
   color: var(--neutral-color__neutral-3);
 }
@@ -177,14 +184,23 @@ body {
   border: none;
 }
 
-/*dropdown*/
-.filters__order {
+.registration__form__select:focus {
+  border: 1px solid var(--brand-color__primary-1);
+  outline: 0;
+}
+
+.registration__form__select {
+  margin-bottom: 32px;
+  padding-left: 16px;
+}
+
+.registration__form__select option {
+  color: var(--brand-color__primary-1);
+}
+
+.filters__order1 {
   background-color: var(--neutral-color__neutral-6);
-  background-image: url(assets/icons/ic_down.svg);
-  background-position-y: center;
-  background-position-x: right;
-  background-position: 149px;
-  background-repeat: no-repeat;
+  border: none;
   height: 47px;
   width: 11em; /* 189px; */
   margin-right: 4em; /* 64.5px;*/
@@ -196,41 +212,12 @@ body {
   padding-left: 16px;
 }
 
-.filters__order__select {
-  display: inline;
-  position: relative;
-}
-
-.filters__order__select__options {
-  display: none;
-  left: 0;
-  position: absolute;
+.filters__order__select1 {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   margin-right: 5em; /* 64.5px;*/
   margin-top: 12px;
   padding: 16px;
   border-radius: 16px;
-  width: 11em; /* 189px; */
-  height: 96px;
-}
-
-.filters__order__select__options li a {
-  color: #000000;
-  font: var(--font-paragrafo);
-  text-decoration: none;
-  display: inline-block;
-  transition: background 0.8s;
-}
-
-.filters__order__select__options a:hover {
-  color: var(--brand-color__primary-1);
-}
-
-/*options*/
-.filters__order__select:hover ul {
-  display: block;
-  transition: 1s;
-  cursor: pointer;
 }
 
 /*modal*/
@@ -290,6 +277,7 @@ body {
 .products {
   width: 100%;
   height: 644px;
+  margin-bottom: 122px;
 }
 
 .products__content {
@@ -303,7 +291,6 @@ body {
   grid-template-columns: 302px;
   grid-template-rows: 157.89px 54px 54px 51px;
   grid-gap: 16px;
-  /*display: none; tirar*/
 }
 
 .products__content__sem-cadastro--img {
@@ -332,6 +319,7 @@ body {
   background-color: var(--neutral-color__neutral-6);
   width: 640px;
   height: 196px;
+  margin-bottom: 32px;
   border-radius: 16px;
   display: flex;
   justify-content: center;
@@ -383,6 +371,11 @@ body {
   font: var(--font-paragrafo);
 }
 
+.options {
+  color: var(--neutral-color__neutral-0);
+  font: var(--font-paragrafo);
+}
+
 .products__content__com-cadastro__card--disponível-box-options {
   margin: 11px 0;
   display: flex;
@@ -394,21 +387,10 @@ body {
   text-align: center;
 }
 
-.options {
-  color: var(--neutral-color__neutral-0);
-  font: var(--font-paragrafo);
+.products__content__com-cadastro__btn {
+  display: flex;
+  justify-content: flex-end;
 }
-
-/* 
-//retângulo para cards produtos indisponíveis
-.products__content__com-cadastro__card--indisponível {
-  background-color: var(--neutral-color__neutral-7);
-  width: 462px;
-  height: 197px;
-  opacity: 0.5;
-  z-index: 4;
-}
-*/
 
 .footer {
   width: 100%;
@@ -476,21 +458,20 @@ body {
 .registration__form__label-float input,
 .registration__form__label-float textarea,
 .registration__form__select {
-  border-color: var(--brand-color__primary-1);
+  border: 1px solid var(--brand-color__primary-1);
   font: var(--font-paragrafo);
   color: var(--neutral-color__neutral-2);
-  outline: none;
   border-radius: 16px;
   width: 640px;
   height: 56px;
   transition: all 0.3s ease-out;
 }
 
-.registration__form__characters {
-  text-align: right;
-  border: none;
-  margin-top: 4px;
-  color: var(--brand-color__primary-0);
+.registration__form__label-float input:focus,
+.registration__form__label-float textarea:focus,
+.registration__form__select:focus {
+  border: 1px solid var(--brand-color__primary-1);
+  outline: 0;
 }
 
 .registration__form__select {
@@ -523,6 +504,12 @@ body {
   margin-left: 16px;
 }
 
+.registration__form__characters {
+  text-align: right;
+  border: none !important;
+  color: var(--brand-color__primary-0);
+}
+
 .registration__form__radio {
   display: grid;
   grid-template-columns: 202px;
@@ -533,8 +520,18 @@ body {
   margin-bottom: 15px;
 }
 
-.registration__form__radio input {
+.registration__form__radio__input {
+  -webkit-appearance: none;
+  border: 1px solid var(--brand-color__primary-0);
+  background-color: var(--neutral-color__neutral-6);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
   margin-right: 8px;
+}
+
+.registration__form__radio__input:checked {
+  background-color: var(--brand-color__primary-0);
 }
 
 .registration__form__btn-form {
@@ -576,4 +573,13 @@ body {
 
 .registration__uploads input {
   float: right;
+  width: 192px;
+}
+
+.box1 {
+  justify-content: space-between;
+}
+
+.box2 {
+  width: 304px;
 }
