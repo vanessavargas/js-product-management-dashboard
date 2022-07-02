@@ -4,7 +4,7 @@ Projeto em HTML, CSS e JavaScript desenvolvido como desafio final do Bootcamp Us
 
 ## Layout da aplicação
 
-![Mockup](https://github.com/VanessaVargas/restaurante-use-academy/blob/master/assets/layout.png)
+![Mockup](https://github.com/VanessaVargas/restaurante-use-academy/blob/master/assets/images/layout.png)
 
 ## Tecnologias utilizadas
 
