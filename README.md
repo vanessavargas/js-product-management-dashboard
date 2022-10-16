@@ -1,6 +1,6 @@
 # Sobre o projeto
 
-Projeto em HTML, CSS e JavaScript desenvolvido como desafio final do Bootcamp Use Academy - painel de gestão de produtos do cardápio do restaurante.
+Projeto em HTML, CSS e JavaScript desenvolvido a partir de um layout disponibilizado no Figam. Desafio final do Bootcamp Use Academy - painel de gestão de produtos do cardápio do restaurante.
 
 ## Layout da aplicação
 
