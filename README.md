@@ -1,16 +1,21 @@
-# Sobre o projeto
+# Project Overview
 
-Projeto em HTML, CSS e JavaScript desenvolvido a partir de um layout disponibilizado no Figma. Desafio final Front End da Trilha Full Stack do Bootcamp Use Academy - painel de gestão de produtos do cardápio do restaurante.
+This project entails a restaurant product management dashboard and menu, developed using HTML, CSS, and JS as part of the Use Academy curriculum. It originated from a layout provided on Figma and serves as the final Front End challenge for the Full Stack Track of the Use Academy Bootcamp.
 
-## Layout da aplicação
+### Application Layout
+
+The application layout was designed and implemented based on the provided Figma layout.
 
 ![Mockup](https://github.com/VanessaVargas/restaurante-use-academy/blob/master/assets/images/layout.png)
 
-## API desenvolvida para consumo: 
-https://github.com/VanessaVargas/api-desafio-use-academy
+### Associated API
 
-## Tecnologias utilizadas
+An API was developed to facilitate data consumption for this project. You can find the API repository [here](https://github.com/VanessaVargas/api-desafio-use-academy).
+
+### Technologies Used
 
 - HTML
 - CSS
-- JS
+- JavaScript
+
+Feel free to further explore and contribute to the project.
